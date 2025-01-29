@@ -1,1 +1,1 @@
-# PyQt6-Swiss-Knife
+# PyQt6 Swiss Knife

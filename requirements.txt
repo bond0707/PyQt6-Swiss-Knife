@@ -1,0 +1,13 @@
+beautifulsoup4==4.12.3
+deep_translator==1.11.4
+playsound==1.2.2
+pymkv==1.0.8
+pypdf==4.3.1
+PyQt6==6.7.1
+PyQt6_sip==13.8.0
+pyttsx3==2.90
+pytubefix==6.8.1
+qt_material==2.14
+Requests==2.32.3
+segno==1.6.0
+win32mica==3.0

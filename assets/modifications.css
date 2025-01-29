@@ -1,0 +1,26 @@
+QLineEdit, QComboBox, QTextEdit{{
+  color: #1de9b6;
+  padding-left: 4px;
+}}
+
+QProgressBar {{
+  border: 2px solid grey;
+  border-radius: 5px;
+}}
+
+QProgressBar::chunk {{
+  color: #1de9b6;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+}}
+
+QMessageBox QPushButton {{
+  background-color: #0c3732; /* Replace with desired hover color */
+  border-color: #1de9b6; /* Replace with desired hover border color */
+}}
+
+QMessageBox QPushButton:hover {{
+  background-color: #0c3732; /* Replace with desired hover color */
+  border-color: #1de9b6; /* Replace with desired hover border color */
+}}
