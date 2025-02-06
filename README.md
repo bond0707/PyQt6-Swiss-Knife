@@ -25,6 +25,6 @@ The PyQt6 Swiss Knife is an application that integrates multiple utilities into 
 * [ ] Increase the size of the SwissKnife icon.
 * [ ] Remove command prompts appearing when `mkvmerge.exe` is called in the YouTube playlist downloader.
 * [ ] Add a line in `del_try_permissions.exe` to delete the MKVToolNix installer executable.
-* [ ] Use MKVToolNix portable version instead of the installer.
+* [ ] Use `MKVToolNix` portable version instead of the installer.
 * [ ] Use `icacls` command properly and use appropriate commands to edit PATH variables to enhance the installation process.
 * [ ] Replace `try_permissions.exe` and `del_try_permissions.exe` with bash scripts.
