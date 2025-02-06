@@ -12,7 +12,6 @@ from PyQt6.QtWidgets import (
     QStackedLayout
 )
 
-from dotenv import load_dotenv
 from qt_material import apply_stylesheet
 from win32mica import MicaTheme, MicaStyle, ApplyMica
 
@@ -109,8 +108,6 @@ class MainWindow(QWidget):
 
 
 if __name__ == '__main__':
-    load_dotenv()
-
     if os.path.exists(os.path.abspath(os.path.join(os.path.dirname(__file__), "assets", "try_permissions.exe"))):
         os.remove(os.path.abspath(os.path.join(
             os.path.dirname(__file__), "assets", "try_permissions.exe")))

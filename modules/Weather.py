@@ -1,4 +1,3 @@
-import os
 import sys
 import requests
 import threading
@@ -24,11 +23,7 @@ class WeatherInfo(QWidget):
     spelling_error_signal = pyqtSignal(int)
     content_signal = pyqtSignal(object, object)
     flag = False
-    ScraperAPI = {
-        'api_key': os.getenv("SCRAPER_API_KEY"),
-        'url': ''
-    }
-    
+
     if __name__=='__main__':
         import DisplayErrors
     else:
@@ -76,11 +71,9 @@ class WeatherInfo(QWidget):
 
 
     def get_weather(self):
-        self.ScraperAPI.update(
-            {'url': 'https://www.timeanddate.com/weather/'+self.country.text()+'/'+self.city.text()})
+        url = 'https://www.timeanddate.com/weather/' + self.country.text() + '/' + self.city.text()
         try:
-            response = requests.get(
-                'http://api.scraperapi.com', params=self.ScraperAPI)
+            response = requests.get(url)
             content = BeautifulSoup(response.text, 'html.parser')
         except:
             self.timeout_signal.emit()
@@ -126,12 +119,12 @@ class WeatherInfo(QWidget):
             self.bottomlayout.addWidget(table)
 
             self.flag = True
-            
-        
+
+
     def DisplayTimeoutError(self):
-        self.TimeoutError = self.DisplayErrors.QErrorMessage("Weather App Connection Error!", "An error occured whie establishing the connection!\nPlease Try Again!")
-        
-    
+        self.TimeoutError = self.DisplayErrors.QErrorMessage("Weather App Connection Error!", "An error occurred while establishing the connection!\nPlease Try Again!")
+
+
     def DisplaySpellingError(self, code):
         self.SpellingError = self.DisplayErrors.QErrorMessage(f"Weather Scraper Error {code}!", "The provided location is invalid!\nCheck your spelling and try again!")
 
